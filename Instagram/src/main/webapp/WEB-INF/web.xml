@@ -20,4 +20,12 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/rs</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/ls</url-pattern>
+</servlet-mapping>
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>org.jsp.myFirst.LoginServlet</servlet-class>
+  </servlet>
 </web-app>

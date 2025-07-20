@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rest Password | Instagram</title>
+  <link rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.form-box {
+  
+  padding: 30px 25px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.lock-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+h2 {
+    color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.send-link {
+  width: 100%;
+  padding: 10px;
+  background-color: #385185;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.send-link:hover {
+  background-color: #2d4373;
+}
+
+.link {
+  font-size: 13px;
+  color: #0095f6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.divider {
+  text-align: center;
+  color: #666;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 40%;
+}
+/* 
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+} */
+
+.create-account {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.back-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color:black;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back-button:hover{
+    text-decoration: underline;
+}
+.create-account:hover{
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="lock-icon">&#128274;</div>
+      <h2>Trouble with logging in?</h2>
+      <p>
+        Enter your email address, phone number or username, and we'll send you a
+        link to get back into your account.
+      </p>
+      <input
+        type="text"
+        placeholder="Email address, phone number or username"
+        class="input-field"
+      />
+      <button class="send-link">Send login link</button>
+      <a href="#" class="link">Can't reset your password?</a>
+
+       <div class="divider">
+        _____________ <span style="color: #7C8080;"><sub><sub><big> OR
+              </big></sub></sub></span> _____________
+      </div>
+
+      <a href="./SignUp.html" class="create-account">Create New Account</a>
+      <a href="./Login.html" class="back-button">Back to Login</a>
+    </div>
+  </div>
+</body>
+</html>

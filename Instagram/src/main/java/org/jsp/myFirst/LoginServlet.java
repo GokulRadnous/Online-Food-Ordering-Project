@@ -5,7 +5,7 @@ import java.sql.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
-public class MyFirstServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String input = req.getParameter("nm"); // username, email, or phone
@@ -66,7 +66,7 @@ public class MyFirstServlet extends HttpServlet {
 				out.println(
 					    "<h1 style='color: yellow; font-family: Verdana;'>"
 					    + "Username, Email or Mobile number not found. "
-					    + "Please <a href=\"SignUp.html\" style=\"color: yellow; text-decoration: none;\">sign up</a>!"
+					    + "Please <a href=\"SignUp.html\" style=\"color: lightblue; text-decoration: none;\">sign up</a>!"
 					    + "</h1>"
 					);
 
@@ -100,3 +100,4 @@ public class MyFirstServlet extends HttpServlet {
 
 	}
 }
+

